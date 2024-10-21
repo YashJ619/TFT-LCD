@@ -1,0 +1,4 @@
+../LCD/ILI9486.c:11:6:lcd_reset	8	static
+../LCD/ILI9486.c:18:6:lcd_write_cmd	16	static
+../LCD/ILI9486.c:26:6:lcd_write_data	16	static
+../LCD/ILI9486.c:32:6:lcd_config	4	static
