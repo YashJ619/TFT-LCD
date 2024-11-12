@@ -1,4 +1,9 @@
 ../LCD/ILI9486.c:11:6:lcd_reset	1
 ../LCD/ILI9486.c:18:6:lcd_write_cmd	1
-../LCD/ILI9486.c:26:6:lcd_write_data	1
-../LCD/ILI9486.c:32:6:lcd_config	1
+../LCD/ILI9486.c:26:6:lcd_write_8data	1
+../LCD/ILI9486.c:32:6:lcd_write_16data	2
+../LCD/ILI9486.c:45:6:lcd_config	1
+../LCD/ILI9486.c:117:6:lcd_set_display_area	1
+../LCD/ILI9486.c:138:10:convert_rgb888_to_rgb565	1
+../LCD/ILI9486.c:147:6:lcd_setbackgroundcolor	2
+../LCD/ILI9486.c:155:6:lcd_FillRectangleFast	7

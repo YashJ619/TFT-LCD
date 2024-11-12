@@ -5,10 +5,8 @@
  *      Author: yash_j
  */
 #include "ILI9486.h"
-#include "stm32f4xx.h"
-#include "spi.h"
-#include "malloc.h"
-#include "string.h"
+
+extern SPI_HandleTypeDef hspi1;
 
 void lcd_reset(void){
 	HAL_GPIO_WritePin(LCD_RST_Port, LCD_RST_Pin, LOW);
@@ -27,7 +25,7 @@ void lcd_write_cmd(uint8_t cmd){
 
 void lcd_write_8data(uint8_t *buf, uint16_t len){
 	HAL_GPIO_WritePin(LCD_CS_Port, LCD_CS_Pin, LOW);
-	HAL_SPI_Transmit(&hspi1, buf, len, HAL_MAX_DELAY); //TODO: CHECK THIS
+	HAL_SPI_Transmit(&hspi1, buf, len, HAL_MAX_DELAY);
 	HAL_GPIO_WritePin(LCD_CS_Port, LCD_CS_Pin, HIGH);
 }
 
@@ -36,9 +34,9 @@ void lcd_write_16data(uint16_t *buf, uint16_t len){
 	uint16_t *ptr = buf;
 	HAL_GPIO_WritePin(LCD_CS_Port, LCD_CS_Pin, LOW);
 	while(len--){
-		data_buf[0] = (uint8_t)((buf >> 8) & 0xFF);
-		data_buf[1] = (uint8_t)(buf & 0xFF);
-		HAL_SPI_Transmit(&hspi1, data_buf, 2, HAL_MAX_DELAY); //TODO: CHECK THIS
+		data_buf[0] = (uint8_t)((*buf >> 8) & 0xFF);
+		data_buf[1] = (uint8_t)(*buf & 0xFF);
+		HAL_SPI_Transmit(&hspi1, data_buf, 2, HAL_MAX_DELAY);
 		ptr++;
 		}
 	HAL_GPIO_WritePin(LCD_CS_Port, LCD_CS_Pin, HIGH);
@@ -50,67 +48,67 @@ void lcd_config(void){
     HAL_Delay(120);
 
 	lcd_write_cmd(TFT_SLPOUT); // Sleep out, also SW reset
-    delay(120);
+    HAL_Delay(120);
 
 	lcd_write_cmd(TFT_PIX_FMT); //Set Pixel Format Value
-	lcd_write_8data(TFT_PIX_FMT_16BIT,1); //Set 16bit Pixel Format
+	lcd_write_8data((uint8_t*)TFT_PIX_FMT_16BIT,1); //Set 16bit Pixel Format
 
 	// By default is also same
 	lcd_write_cmd(TFT_PWRCTRL1); //Set Power Control 1
-	lcd_write_8data(0x0E);    //                          0001.0111   ... VRH1
-    lcd_write_8data(0x0E);    //                          0001.0101   ... VRH2
+	lcd_write_8data((uint8_t*)0x0E,1);    //                          0001.0111   ... VRH1
+    lcd_write_8data((uint8_t*)0x0E,1);    //                          0001.0101   ... VRH2
     
 	lcd_write_cmd(TFT_PWRCTRL2); //                          1100.0001 Power Control 2
-    lcd_write_8data(0x41);    //                          0100.0001   . SAP BT
-    lcd_write_8data(0x00);    //                          0000.0000   ..... VC
+    lcd_write_8data((uint8_t*)0x41,1);    //                          0100.0001   . SAP BT
+    lcd_write_8data((uint8_t*)0x00,1);    //                          0000.0000   ..... VC
     
 	lcd_write_cmd(TFT_PWRCTRL3); //                          1100.0010 Power Control 3
-    lcd_write_8data(0x55);    //     nb. was 0x44         0101.0101   . DCA1 . DCA0
+    lcd_write_8data((uint8_t*)0x55,1);    //     nb. was 0x44         0101.0101   . DCA1 . DCA0
 
 	lcd_write_cmd(TFT_VCOM_CTRL);
-    lcd_write_8data(0x00);
-    lcd_write_8data(0x00);
-    lcd_write_8data(0x00);
-    lcd_write_8data(0x00);
+    lcd_write_8data((uint8_t*)0x00,1);
+    lcd_write_8data((uint8_t*)0x00,1);
+    lcd_write_8data((uint8_t*)0x00,1);
+    lcd_write_8data((uint8_t*)0x00,1);
 
 	lcd_write_cmd(TFT_PGAMCTRL);
-    lcd_write_8data(0x0F);
-    lcd_write_8data(0x1F);
-    lcd_write_8data(0x1C);
-    lcd_write_8data(0x0C);
-    lcd_write_8data(0x0F);
-    lcd_write_8data(0x08);
-    lcd_write_8data(0x48);
-    lcd_write_8data(0x98);
-    lcd_write_8data(0x37);
-    lcd_write_8data(0x0A);
-    lcd_write_8data(0x13);
-    lcd_write_8data(0x04);
-    lcd_write_8data(0x11);
-    lcd_write_8data(0x0D);
-    lcd_write_8data(0x00);
+    lcd_write_8data((uint8_t*)0x0F,1);
+    lcd_write_8data((uint8_t*)0x1F,1);
+    lcd_write_8data((uint8_t*)0x1C,1);
+    lcd_write_8data((uint8_t*)0x0C,1);
+    lcd_write_8data((uint8_t*)0x0F,1);
+    lcd_write_8data((uint8_t*)0x08,1);
+    lcd_write_8data((uint8_t*)0x48,1);
+    lcd_write_8data((uint8_t*)0x98,1);
+    lcd_write_8data((uint8_t*)0x37,1);
+    lcd_write_8data((uint8_t*)0x0A,1);
+    lcd_write_8data((uint8_t*)0x13,1);
+    lcd_write_8data((uint8_t*)0x04,1);
+    lcd_write_8data((uint8_t*)0x11,1);
+    lcd_write_8data((uint8_t*)0x0D,1);
+    lcd_write_8data((uint8_t*)0x00,1);
  
 	lcd_write_cmd(TFT_NGAMCTRL);
-    lcd_write_8data(0x0F);
-    lcd_write_8data(0x32);
-    lcd_write_8data(0x2E);
-    lcd_write_8data(0x0B);
-    lcd_write_8data(0x0D);
-    lcd_write_8data(0x05);
-    lcd_write_8data(0x47);
-    lcd_write_8data(0x75);
-    lcd_write_8data(0x37);
-    lcd_write_8data(0x06);
-    lcd_write_8data(0x10);
-    lcd_write_8data(0x03);
-    lcd_write_8data(0x24);
-    lcd_write_8data(0x20);
-    lcd_write_8data(0x00);
+    lcd_write_8data((uint8_t*)0x0F,1);
+    lcd_write_8data((uint8_t*)0x32,1);
+    lcd_write_8data((uint8_t*)0x2E,1);
+    lcd_write_8data((uint8_t*)0x0B,1);
+    lcd_write_8data((uint8_t*)0x0D,1);
+    lcd_write_8data((uint8_t*)0x05,1);
+    lcd_write_8data((uint8_t*)0x47,1);
+    lcd_write_8data((uint8_t*)0x75,1);
+    lcd_write_8data((uint8_t*)0x37,1);
+    lcd_write_8data((uint8_t*)0x06,1);
+    lcd_write_8data((uint8_t*)0x10,1);
+    lcd_write_8data((uint8_t*)0x03,1);
+    lcd_write_8data((uint8_t*)0x24,1);
+    lcd_write_8data((uint8_t*)0x20,1);
+    lcd_write_8data((uint8_t*)0x00,1);
 
 	lcd_write_cmd(TFT_INVOFF); //Display Inversion OFF
 
 	lcd_write_cmd(TFT_MADCTL); //Set Memory Access Control
-	lcd_write_8data(TFT_MAD_MX | TFT_MAD_BGR); // Set MX = 1, BGR = 1
+	lcd_write_8data((uint8_t*)(TFT_MAD_MX | TFT_MAD_BGR),1); // Set MX = 1, BGR = 1
 
 	lcd_write_cmd(TFT_DISPLAY_ON); // display on
     HAL_Delay(150);
@@ -150,7 +148,7 @@ void lcd_setbackgroundcolor(uint16_t color){
 	color = convert_rgb888_to_rgb565(color);
 	lcd_set_display_area(0,TFT_WIDTH,0,TFT_HEIGHT);
 	for(int i = 0; i < (TFT_WIDTH * TFT_HEIGHT); i++){
-		lcd_write_16data(color,1);
+		lcd_write_16data(&color,1);
 	}
 }
 
@@ -167,11 +165,11 @@ void lcd_FillRectangleFast(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint1
     // Prepare whole line in a single buffer
     uint8_t pixel[] = { color >> 8, color & 0xFF };
     uint8_t *line = malloc(w * sizeof(pixel));
-    for(x = 0; x < w; ++x)
+    for(x = 0; x < w; ++x){
     	memcpy(line + x * sizeof(pixel), pixel, sizeof(pixel));
-	
-	for(y = h; y > 0; y--)
-        HAL_SPI_Transmit(&hspi1, line, w * sizeof(pixel), HAL_MAX_DELAY);
-
+    	for(y = h; y > 0; y--){
+    		HAL_SPI_Transmit(&hspi1, line, w * sizeof(pixel), HAL_MAX_DELAY);
+    	}
+    }
     free(line);
 }
