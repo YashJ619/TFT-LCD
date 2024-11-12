@@ -145,4 +145,17 @@
 #define TFT_MAD_GS  0x01
 #define TFT_MAD_RGB 0x00
 
+#define TFT_PIX_FMT_16BIT   0x55
+#define TFT_PIX_FMT_18BIT   0x66
+
+void lcd_reset(void);
+void lcd_write_cmd(uint8_t cmd);
+void lcd_write_8data(uint8_t *buf, uint16_t len);
+void lcd_write_16data(uint16_t *buf, uint16_t len);
+void lcd_config(void);
+void lcd_set_display_area(uint16_t x1, uint16_t x2, uint16_t y1, uint16_t y2);
+uint16_t convert_rgb888_to_rgb565(uint32_t rgb888);
+void lcd_setbackgroundcolor(uint16_t color);
+void lcd_FillRectangleFast(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
+
 #endif /* ILI9486_H_ */

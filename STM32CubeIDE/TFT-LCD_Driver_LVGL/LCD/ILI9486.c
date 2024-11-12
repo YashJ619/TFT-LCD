@@ -7,6 +7,8 @@
 #include "ILI9486.h"
 #include "stm32f4xx.h"
 #include "spi.h"
+#include "malloc.h"
+#include "string.h"
 
 void lcd_reset(void){
 	HAL_GPIO_WritePin(LCD_RST_Port, LCD_RST_Pin, LOW);
@@ -144,10 +146,32 @@ uint16_t convert_rgb888_to_rgb565(uint32_t rgb888)
 	return (uint16_t)((r << 11) | (g << 5) | b);
 }
 
-void setbackgroundcolor(uint16_t color){
+void lcd_setbackgroundcolor(uint16_t color){
 	color = convert_rgb888_to_rgb565(color);
 	lcd_set_display_area(0,TFT_WIDTH,0,TFT_HEIGHT);
 	for(int i = 0; i < (TFT_WIDTH * TFT_HEIGHT); i++){
 		lcd_write_16data(color,1);
 	}
+}
+
+void lcd_FillRectangleFast(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
+    // clipping
+    if((x >= TFT_WIDTH) || (y >= TFT_HEIGHT)) return;
+    if((x + w - 1) >= TFT_WIDTH) w = TFT_HEIGHT - x;
+    if((y + h - 1) >= TFT_WIDTH) h = TFT_HEIGHT - y;
+
+	color = convert_rgb888_to_rgb565(color);
+
+    lcd_set_display_area(x, y, x+w-1, y+h-1);
+
+    // Prepare whole line in a single buffer
+    uint8_t pixel[] = { color >> 8, color & 0xFF };
+    uint8_t *line = malloc(w * sizeof(pixel));
+    for(x = 0; x < w; ++x)
+    	memcpy(line + x * sizeof(pixel), pixel, sizeof(pixel));
+	
+	for(y = h; y > 0; y--)
+        HAL_SPI_Transmit(&hspi1, line, w * sizeof(pixel), HAL_MAX_DELAY);
+
+    free(line);
 }
