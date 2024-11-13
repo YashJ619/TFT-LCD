@@ -1,11 +1,11 @@
 Core/Src/system_stm32f4xx.o: ../Core/Src/system_stm32f4xx.c \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h \
- C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/core_cm4.h \
- C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_version.h \
- C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_compiler.h \
- C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_gcc.h \
- C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/mpu_armv7.h \
+ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/core_cm4.h \
+ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_version.h \
+ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_compiler.h \
+ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_gcc.h \
+ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
@@ -27,11 +27,11 @@ Core/Src/system_stm32f4xx.o: ../Core/Src/system_stm32f4xx.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
-C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/core_cm4.h:
-C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_version.h:
-C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_compiler.h:
-C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_gcc.h:
-C:/Users/Yash/Desktop/TFT-LCD/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/mpu_armv7.h:
+C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/core_cm4.h:
+C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_version.h:
+C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_compiler.h:
+C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/cmsis_gcc.h:
+C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
