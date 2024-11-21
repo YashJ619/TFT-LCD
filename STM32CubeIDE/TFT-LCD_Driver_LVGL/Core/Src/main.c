@@ -26,6 +26,7 @@
 #include "ILI9486.h"
 #include "../../LVGL_Lib/lvgl.h"
 #include "../../lv_conf.h"
+#include "../../LVGL_Lib/examples/lv_examples.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,6 +95,8 @@ int main(void)
 lcd_config();
 lcd_setbackgroundcolor(ILI9486_PURPLE);
 lv_init();
+
+lv_example_get_started_1();
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -394,7 +394,40 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/../../LVGL_Lib/src/core/../stdlib/builtin/../../misc/lv_ll.h \
  ../Core/Src/../../LVGL_Lib/src/core/../tick/lv_tick.h \
  ../Core/Src/../../LVGL_Lib/src/core/../layouts/lv_layout.h \
- ../Core/Src/../../lv_conf.h
+ ../Core/Src/../../lv_conf.h \
+ ../Core/Src/../../LVGL_Lib/examples/lv_examples.h \
+ ../Core/Src/../../LVGL_Lib/examples/../lvgl.h \
+ ../Core/Src/../../LVGL_Lib/examples/anim/lv_example_anim.h \
+ ../Core/Src/../../LVGL_Lib/examples/event/lv_example_event.h \
+ ../Core/Src/../../LVGL_Lib/examples/get_started/lv_example_get_started.h \
+ ../Core/Src/../../LVGL_Lib/examples/layouts/lv_example_layout.h \
+ ../Core/Src/../../LVGL_Lib/examples/layouts/flex/lv_example_flex.h \
+ ../Core/Src/../../LVGL_Lib/examples/layouts/grid/lv_example_grid.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/lv_example_libs.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/barcode/lv_example_barcode.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/bmp/lv_example_bmp.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/ffmpeg/lv_example_ffmpeg.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/freetype/lv_example_freetype.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/gif/lv_example_gif.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/lodepng/lv_example_lodepng.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/libpng/lv_example_libpng.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/qrcode/lv_example_qrcode.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/rlottie/lv_example_rlottie.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/tjpgd/lv_example_tjpgd.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/libjpeg_turbo/lv_example_libjpeg_turbo.h \
+ ../Core/Src/../../LVGL_Lib/examples/libs/tiny_ttf/lv_example_tiny_ttf.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/lv_example_others.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/file_explorer/lv_example_file_explorer.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/fragment/lv_example_fragment.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/gridnav/lv_example_gridnav.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/ime/lv_example_ime_pinyin.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/imgfont/lv_example_imgfont.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/monkey/lv_example_monkey.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/observer/lv_example_observer.h \
+ ../Core/Src/../../LVGL_Lib/examples/others/snapshot/lv_example_snapshot.h \
+ ../Core/Src/../../LVGL_Lib/examples/scroll/lv_example_scroll.h \
+ ../Core/Src/../../LVGL_Lib/examples/styles/lv_example_style.h \
+ ../Core/Src/../../LVGL_Lib/examples/widgets/lv_example_widgets.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -794,3 +827,36 @@ C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Driver_LVGL/lv_conf.h:
 ../Core/Src/../../LVGL_Lib/src/core/../tick/lv_tick.h:
 ../Core/Src/../../LVGL_Lib/src/core/../layouts/lv_layout.h:
 ../Core/Src/../../lv_conf.h:
+../Core/Src/../../LVGL_Lib/examples/lv_examples.h:
+../Core/Src/../../LVGL_Lib/examples/../lvgl.h:
+../Core/Src/../../LVGL_Lib/examples/anim/lv_example_anim.h:
+../Core/Src/../../LVGL_Lib/examples/event/lv_example_event.h:
+../Core/Src/../../LVGL_Lib/examples/get_started/lv_example_get_started.h:
+../Core/Src/../../LVGL_Lib/examples/layouts/lv_example_layout.h:
+../Core/Src/../../LVGL_Lib/examples/layouts/flex/lv_example_flex.h:
+../Core/Src/../../LVGL_Lib/examples/layouts/grid/lv_example_grid.h:
+../Core/Src/../../LVGL_Lib/examples/libs/lv_example_libs.h:
+../Core/Src/../../LVGL_Lib/examples/libs/barcode/lv_example_barcode.h:
+../Core/Src/../../LVGL_Lib/examples/libs/bmp/lv_example_bmp.h:
+../Core/Src/../../LVGL_Lib/examples/libs/ffmpeg/lv_example_ffmpeg.h:
+../Core/Src/../../LVGL_Lib/examples/libs/freetype/lv_example_freetype.h:
+../Core/Src/../../LVGL_Lib/examples/libs/gif/lv_example_gif.h:
+../Core/Src/../../LVGL_Lib/examples/libs/lodepng/lv_example_lodepng.h:
+../Core/Src/../../LVGL_Lib/examples/libs/libpng/lv_example_libpng.h:
+../Core/Src/../../LVGL_Lib/examples/libs/qrcode/lv_example_qrcode.h:
+../Core/Src/../../LVGL_Lib/examples/libs/rlottie/lv_example_rlottie.h:
+../Core/Src/../../LVGL_Lib/examples/libs/tjpgd/lv_example_tjpgd.h:
+../Core/Src/../../LVGL_Lib/examples/libs/libjpeg_turbo/lv_example_libjpeg_turbo.h:
+../Core/Src/../../LVGL_Lib/examples/libs/tiny_ttf/lv_example_tiny_ttf.h:
+../Core/Src/../../LVGL_Lib/examples/others/lv_example_others.h:
+../Core/Src/../../LVGL_Lib/examples/others/file_explorer/lv_example_file_explorer.h:
+../Core/Src/../../LVGL_Lib/examples/others/fragment/lv_example_fragment.h:
+../Core/Src/../../LVGL_Lib/examples/others/gridnav/lv_example_gridnav.h:
+../Core/Src/../../LVGL_Lib/examples/others/ime/lv_example_ime_pinyin.h:
+../Core/Src/../../LVGL_Lib/examples/others/imgfont/lv_example_imgfont.h:
+../Core/Src/../../LVGL_Lib/examples/others/monkey/lv_example_monkey.h:
+../Core/Src/../../LVGL_Lib/examples/others/observer/lv_example_observer.h:
+../Core/Src/../../LVGL_Lib/examples/others/snapshot/lv_example_snapshot.h:
+../Core/Src/../../LVGL_Lib/examples/scroll/lv_example_scroll.h:
+../Core/Src/../../LVGL_Lib/examples/styles/lv_example_style.h:
+../Core/Src/../../LVGL_Lib/examples/widgets/lv_example_widgets.h:
