@@ -1,0 +1,15 @@
+21:12:00 **** Incremental Build of configuration Debug for project TFT-LCD_Nucleo ****
+make -j4 all 
+arm-none-eabi-gcc "../LCD/ILI9486.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I"C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Nucleo/Drivers/CMSIS/Include" -I"C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Nucleo/LCD" -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"LCD/ILI9486.d" -MT"LCD/ILI9486.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LCD/ILI9486.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I"C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Nucleo/Drivers/CMSIS/Include" -I"C:/Users/Yash/Desktop/TFT-LCD/STM32CubeIDE/TFT-LCD_Nucleo/LCD" -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "TFT-LCD_Nucleo.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Yash\Desktop\TFT-LCD\STM32CubeIDE\TFT-LCD_Nucleo\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT-LCD_Nucleo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TFT-LCD_Nucleo.elf
+ 
+arm-none-eabi-size  TFT-LCD_Nucleo.elf 
+arm-none-eabi-objdump -h -S TFT-LCD_Nucleo.elf  > "TFT-LCD_Nucleo.list"
+   text	   data	    bss	    dec	    hex	filename
+  10776	     12	   1732	  12520	   30e8	TFT-LCD_Nucleo.elf
+Finished building: default.size.stdout
+ 
+Finished building: TFT-LCD_Nucleo.list
+ 

@@ -91,9 +91,15 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+
   lcd_config();
-//  HAL_Delay(1000);
-  lcd_setbackgroundcolor(ILI9486_PURPLE);
+
+  lcd_setbackgroundcolor(ILI9486_BLACK);
+
+  HAL_Delay(1000);
+
+  lcd_FillRectangle(135, 215, 50, 50, ILI9486_BLUE);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,10 +109,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	  lcd_config();
-//	  lcd_setbackgroundcolor(ILI9486_PURPLE);
-//	  HAL_Delay(1000);
-  }
+}
   /* USER CODE END 3 */
 }
 

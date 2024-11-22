@@ -1,4 +1,6 @@
 # STM32CubeIDE
-.metadata/
-.settings/
-*.ld
+STM32CubeIDE\.metadata
+STM32CubeIDE\TFT-LCD_Driver_LVGL\.settings
+STM32CubeIDE\TFT-LCD_Driver_LVGL\Debug
+STM32CubeIDE\TFT-LCD_Nucleo\.settings
+STM32CubeIDE\TFT-LCD_Nucleo\Debug\
