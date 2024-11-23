@@ -1,9 +1,0 @@
-../LCD/ILI9486.c:15:6:lcd_reset	8	static
-../LCD/ILI9486.c:22:6:lcd_write_cmd	24	static
-../LCD/ILI9486.c:31:6:lcd_write_8data	24	static
-../LCD/ILI9486.c:41:6:lcd_write_16data	24	static
-../LCD/ILI9486.c:54:6:lcd_config	32	static
-../LCD/ILI9486.c:165:6:lcd_set_display_area	32	static
-../LCD/ILI9486.c:187:10:convert_rgb888_to_rgb565	24	static
-../LCD/ILI9486.c:195:6:lcd_setbackgroundcolor	24	static
-../LCD/ILI9486.c:207:6:lcd_FillRectangle	32	static
