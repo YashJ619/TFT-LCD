@@ -4,10 +4,16 @@ STM32CubeIDE/TFT-LCD_Driver_LVGL/.cproject
 STM32CubeIDE/TFT-LCD_Driver_LVGL/.project
 STM32CubeIDE/TFT-LCD_Driver_LVGL/.settings/
 STM32CubeIDE/TFT-LCD_Driver_LVGL/Debug/
+
 STM32CubeIDE/TFT-LCD_Nucleo/.cproject
 STM32CubeIDE/TFT-LCD_Nucleo/.project
 STM32CubeIDE/TFT-LCD_Nucleo/.settings/
 STM32CubeIDE/TFT-LCD_Nucleo/Debug/
+
+STM32CubeIDE/TFT-LCD_Nucleo_LVGL/.cproject
+STM32CubeIDE/TFT-LCD_Nucleo_LVGL/.project
+STM32CubeIDE/TFT-LCD_Nucleo_LVGL/.settings/
+STM32CubeIDE/TFT-LCD_Nucleo_LVGL/Debug/
 
 *.metadata/	# IDE workspace metadata
 *.settings/     # User-specific project settings
