@@ -1,3 +1,17 @@
 # STM32CubeIDE
-*.metadata/
-*Debug/
+STM32CubeIDE/.metadata
+STM32CubeIDE/TFT-LCD_Driver_LVGL/.cproject
+STM32CubeIDE/TFT-LCD_Driver_LVGL/.project
+STM32CubeIDE/TFT-LCD_Driver_LVGL/.settings/
+STM32CubeIDE/TFT-LCD_Driver_LVGL/Debug/
+STM32CubeIDE/TFT-LCD_Nucleo/.cproject
+STM32CubeIDE/TFT-LCD_Nucleo/.project
+STM32CubeIDE/TFT-LCD_Nucleo/.settings/
+STM32CubeIDE/TFT-LCD_Nucleo/Debug/
+
+*.metadata/	# IDE workspace metadata
+*.settings/     # User-specific project settings
+*.launch	# IDE launch configurations
+**/*.cproject	# STM32CubeIDE project configuration
+*.project       # STM32CubeIDE project configuration
+*Debug/		# Debug build output
